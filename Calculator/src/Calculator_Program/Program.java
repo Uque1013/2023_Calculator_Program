@@ -27,6 +27,10 @@ public class Program extends JFrame {
 	private ImageIcon multiply_click = new ImageIcon(Server.class.getResource("../Image/Multiply2.png"));
 	private ImageIcon devide = new ImageIcon(Server.class.getResource("../Image/Devide.png"));
 	private ImageIcon devide_click = new ImageIcon(Server.class.getResource("../Image/Devide2.png"));
+	private ImageIcon delete = new ImageIcon(Server.class.getResource("../Image/Delete.png"));
+	private ImageIcon delete_click = new ImageIcon(Server.class.getResource("../Image/Delete2.png"));
+	private ImageIcon reset = new ImageIcon(Server.class.getResource("../Image/Reset.png"));
+	private ImageIcon reset_click = new ImageIcon(Server.class.getResource("../Image/Reset2.png"));
 	
 	public Program() {
 		Calculator();			// 계산기 화면 함수
@@ -74,6 +78,20 @@ public class Program extends JFrame {
 		Devide.setBounds(345, 212, 120, 70);
 		Devide.setRolloverIcon(devide_click);
 		
+		Delete.setLayout(null);
+		Delete.setIcon(delete);
+		Delete.setBorderPainted(false);
+		Delete.setBounds(345, 142, 120, 70);
+		Delete.setRolloverIcon(delete_click);
+		
+		Reset.setLayout(null);
+		Reset.setIcon(reset);
+		Reset.setBorderPainted(false);
+		Reset.setBounds(0, 142, 120, 70);
+		Reset.setRolloverIcon(reset_click);
+		
+		add(Reset);
+		add(Delete);
 		add(Devide);
 		add(Multiply);
 		add(Minus);
